@@ -1,2 +1,5 @@
-# GCI19-CodeForce1
-CodeForces User Info Scraper
+#  Codeforces User Info Scraper
+
+A simple python script that does what the title implies.
+
+Comes with a tkinter GUI, but you can use it in a terminal too by setting `CUI` to `True` in the script.
