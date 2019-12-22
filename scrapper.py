@@ -13,7 +13,13 @@ def get_info(user):
     if json['status'] != 'OK':
         return None
     data = json['result'][0]
-    return data['handle'], data['rating'], data['rank'], data['maxRating'], data['maxRank']
+    # sometimes the data isn't there
+    handle = data['handle'] if 'handle' in data else 'Unknown'
+    rating = data['rating'] if 'rating' in data else 'Unknown'
+    rank = data['rank'] if 'rank' in data else 'Unknown'
+    maxRating = data['maxRating'] if 'maxRating' in data else 'Unknown'
+    maxRank = data['maxRank'] if 'maxRank' in data else 'Unknown'
+    return handle, rating, rank, maxRating, maxRating
 
 
 def gui():
